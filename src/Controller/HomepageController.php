@@ -4,22 +4,23 @@ namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
 class HomepageController extends AbstractController
 {
     /**
-     * @Route("/", name="homepage")
+     * @Route("/", name="homepage", methods={"GET"})
+     * @Template
      */
     public function index()
     {
-        return $this->render('homepage/index.html.twig');
     }
 
     /**
-     * @Route("/projects", name="homepage_projects")
+     * @Route("/projects", name="homepage_projects", methods={"GET"})
+     * @Template
      */
     public function projects()
     {
-        return $this->render('homepage/projects.html.twig');
     }
 }
