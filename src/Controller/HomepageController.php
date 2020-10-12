@@ -23,4 +23,20 @@ class HomepageController extends AbstractController
     public function projects()
     {
     }
+
+	/**
+	 * @Route("/cv", name="homepage_cv", methods={"GET"})
+	 * @Template
+	 */
+	public function cv()
+	{
+	}
+
+	/**
+	 * @Route("/services", name="homepage_services", methods={"GET"})
+	 * @Template
+	 */
+	public function services()
+	{
+	}
 }
