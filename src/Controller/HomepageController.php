@@ -22,6 +22,8 @@ class HomepageController extends AbstractController
      */
     public function projects()
     {
+		// not implemented yet
+		return $this->redirectToRoute('homepage');
     }
 
 	/**
@@ -38,5 +40,7 @@ class HomepageController extends AbstractController
 	 */
 	public function services()
 	{
+		// not implemented yet
+		return $this->redirectToRoute('homepage');
 	}
 }
