@@ -1,7 +1,40 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Adrien Gras{% endblock %}
+{% block title %}Adrien Gras - Projets{% endblock %}
 
 {% block body %}
-{% include "homepage/partials/menu.html.twig" %}
+	{% include "homepage/partials/menu.html.twig" %}
+
+	<div id="projectpage-head-block">
+		<div class="container h-100">
+			<div class="row h-100">
+				<div class="col-md-12 my-auto">
+					<h1 class="display-4 color-white">Nos projets</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container pt-3 pb-3">
+		<div class="row h-100 pt-5 pb-5">
+			<div class="col-md-3 mx-auto">
+
+					<div class="card project-card p-2">
+						<img src="{{ asset('img/docker_logo.png') }}" class="card-img-top" alt="Docker">
+						<div class="card-body">
+							<h5 class="card-title text-dark no-decoration">Stack docker + Symfony</h5>
+							<p class="card-text text-dark no-decoration">Un moyen rapide et facile de déployer tout le nécessaire pour faire tourner un projet Symfony4/5, que ce soit pour du dev, ou pour un site live.</p>
+						</div>
+						<a href="https://github.com/AdrienGras/docker-stack" class="btn btn-primary mx-auto" target="_blank"><i class="fab fa-github"></i> Github</a>
+					</div>
+
+			</div>
+		</div>
+	</div>
+
+	{% include "homepage/partials/footer.html.twig" %}
+{% endblock %}
+
+{% block javascripts %}
+	{{ parent() }}
 {% endblock %}
