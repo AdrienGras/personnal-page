@@ -16,11 +16,18 @@
 }
 
 #head-block {
-    background: radial-gradient(ellipse at bottom, hsla(246, 20%, 45%, 1) 0%, hsl(246, 20%, 13%) 100%);
-    background-attachment: fixed;
+    background: radial-gradient(ellipse at bottom, hsla(246, 20%, 45%, 1) 0%, hsl(246, 20%, 13%) 100%) fixed;
     color: hsla(246, 20%, 95%, 1);
     height: 450px;
 }
+@media (max-width: 600px) {
+    #head-block {
+        background: radial-gradient(ellipse at bottom, hsla(246, 20%, 45%, 1) 0%, hsl(246, 20%, 13%) 100%) fixed;
+        color: hsla(246, 20%, 95%, 1);
+        height: 100%;
+    }
+}
+
 
 .head-block-height {
     height: 450px;
@@ -31,6 +38,14 @@
     background-size: cover;
     height: 60vh;
 }
+@media (max-width: 600px) {
+    #mainpage-head-block {
+        background-image: url("../img/desk_stock2.jpg");
+        background-size: cover;
+        height: 100%;
+    }
+}
+
 #mainpage-big-header {
     color: white;
 }
@@ -70,4 +85,7 @@ body > div.footer.sticky-bottom.bg-grey > div > span {
 }
 .no-decoration, .no-decoration:hover, .no-decoration:visited, .no-decoration:link, .no-decoration:active {
     text-decoration: none;
+}
+.padding-top-escape-menu {
+    padding-top: 60px;
 }
