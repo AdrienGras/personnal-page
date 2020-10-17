@@ -208,3 +208,29 @@ ul.listComp li{
 .padding-top-escape-menu {
     padding-top: 60px;
 }
+
+a.btn-lg{
+    background: #5C6D88;
+    border: 0;
+    padding: 10px 30px;
+}
+
+a.btn-lg:hover{
+    background: #4A586D;
+}
+
+a.btn-lg:focus{
+    background: #4A586D !important;
+    box-shadow: 0 0 0 0.2rem #3B4656 !important;
+}
+div.containerComp div.text-center{
+    height: 175px;
+}
+
+div.containerComp i{
+    color: #444363;
+}
+
+i.icoMain{
+    color: #444363;
+}
