@@ -234,3 +234,6 @@ div.containerComp i{
 i.icoMain{
     color: #444363;
 }
+.img-shadow {
+    box-shadow: rgba(0, 0, 0, 0.7) 2px 2px 2px;
+}
