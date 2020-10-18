@@ -16,6 +16,6 @@
 ###< symfony/phpunit-bridge ###
 
 ###> IDE ###
-.idea
-nbproject
+/.idea/
+/nbproject/
 ###< IDE ###
