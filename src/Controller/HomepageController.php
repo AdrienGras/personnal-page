@@ -4,7 +4,7 @@ namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
-use Symfony\Component\HttpFoundation\File\File;
+use Symfony\Component\HttpFoundation\ResponseHeaderBag;
 use Symfony\Component\HttpKernel\KernelInterface;
 use Symfony\Component\Routing\Annotation\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
@@ -29,14 +29,15 @@ class HomepageController extends AbstractController
 
 	/**
 	 * @Route("/CGV", name="cgv", methods={"GET"})
-	 * @Template
 	 * @param KernelInterface $kernel
 	 * @return BinaryFileResponse
 	 */
 	public function cgv(KernelInterface $kernel)
 	{
 		$cgvpath = $kernel->getProjectDir().'/storage/cgv/CGV_adriengras_rev1.pdf';
-		return new BinaryFileResponse($cgvpath);
+		$response = new BinaryFileResponse($cgvpath);
+		$response->setContentDisposition(ResponseHeaderBag::DISPOSITION_INLINE, 'CGV_adriengras_rev1.pdf');
+		return $response;
 	}
 
 	/**
